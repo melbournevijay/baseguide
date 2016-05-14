@@ -26,7 +26,7 @@ git clone https://github.com/slavanga/baseguide
 
 **Download**
 
-[Download the latest release](https://github.com/slavanga/baseguide/archive/master.zip)
+[Download the latest release](https://github.com/slavanga/baseguide/releases/latest)
 
 ### Setup
 
@@ -48,7 +48,7 @@ npm install && gulp serve
 
 
 ## Grid
-The grid framework is based on the [Bootstrap grid system](http://getbootstrap.com/css/#grid).
+The grid framework is based on the [Bootstrap grid system](https://getbootstrap.com/css/#grid).
 
 ### Breakpoints
 Breakpoints can easily be configured using the ```$mq-breakpoints``` map. Note that the breakpoints have to be sorted from small to large.
@@ -228,6 +228,15 @@ While the controls are functional in all browsers the following ones get the ful
 
 You can set the variable ```$use-custom-forms``` to ```false``` to disable custom form styles in all browsers.
 
+### Caveats
+In iOS versions prior to 5.1.1 the code below is required to make custom radio buttons and checkboxes work.
+
+```js
+if (document.addEventListener) {
+  document.addEventListener('click', function() {}, false);
+}
+```
+
 
 ## Browser support
 
@@ -250,7 +259,7 @@ browsers: [
 
 ## Inspired By…
 * [Article: Styling with STRINGS](http://simurai.com/blog/2014/05/04/cssconf/)
-* [Bootstrap](http://getbootstrap.com/)
+* [Bootstrap](https://getbootstrap.com/)
 * [Bourbon](http://bourbon.io/)
 * [Foundation](http://foundation.zurb.com/)
 * [HTML5 Boilerplate](https://html5boilerplate.com/)
